@@ -2,8 +2,8 @@ name: Move Cards do Backlog para Ready
 
 on:
   issues:
-    workflow_dispatch:
     types: [opened, edited]
+  workflow_dispatch:
 
 jobs:
   move-cards:
@@ -15,6 +15,6 @@ jobs:
       - name: Mover cards contendo "SPRINT 2" do Backlog para Ready
         uses: alex-page/github-project-automation-plus@v0.8.3
         with:
-          project: "Teste Projects" # Substitua pelo nome do seu projeto
+          project: "Teste Projects"
           column: "Ready"
           repo-token: ${{ secrets.GITHUB_TOKEN }}
