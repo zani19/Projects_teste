@@ -1,7 +1,8 @@
-name: Move Cards to Ready
+name: Move Cards do Backlog para Ready
 
 on:
   issues:
+    workflow_dispatch:
     types: [opened, edited]
 
 jobs:
