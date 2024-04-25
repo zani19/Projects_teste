@@ -1,0 +1,22 @@
+name: Move Cards to Ready
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Roda todos os dias à meia-noite
+  workflow_dispatch: # Para rodar manualmente se necessário
+
+jobs:
+  move-cards:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Move cards from Backlog to Ready
+        uses: actions/checkout@v2
+        
+      - name: Move cards containing "SPRINT 2" from Backlog to Ready
+        uses: philschatz/project-bot-action@v1
+        with:
+          project-name: "Nome do seu projeto"
+          column-name: "Ready"
+          action: "move"
+          card-filter: "SPRINT 2"
+          github-token: ${{ secrets.GITHUB_TOKEN }}
