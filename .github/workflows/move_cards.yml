@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v2
         
       - name: Mover cards contendo "SPRINT 2" do Backlog para Ready
-        uses: alex-page/github-project-automation-plus@v1
+        uses: alex-page/github-project-automation-plus@v0.0.5
         with:
           project: "Nome do seu projeto" # Substitua pelo nome do seu projeto
           column_name: "Ready"
