@@ -3,7 +3,6 @@ name: Move Cards do Backlog para Ready
 on:
   issues:
     types: [opened, edited]
-  workflow_dispatch:
 
 jobs:
   move-cards:
@@ -18,3 +17,4 @@ jobs:
           project: "Teste Projects"
           column: "Ready"
           repo-token: ${{ secrets.GITHUB_TOKEN }}
+
